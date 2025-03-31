@@ -1,6 +1,6 @@
 export function createDiscountCoupon() {
   const coupon = document.createElement('div');
-  coupon.className = 'discount-coupon container';
+  coupon.className = 'discount-coupon container-auto';
   coupon.innerHTML = `
     <div class="row justify-content-center g-1">
       <p class="col-auto">Ganhe </p>

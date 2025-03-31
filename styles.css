@@ -1,7 +1,10 @@
 :root {
   --primary-color: #005cff;
   --secondary-color: #6220c1;
-  --tertiary-color: #ffffff;
+
+  --color-white: #ffffff;
+  --color-white-02: #e7e7ea;
+  --color-black: #000000;
 }
 
 body {
@@ -12,7 +15,7 @@ body {
 
 .discount-coupon {
   background-color: var(--primary-color);
-  color: var(--tertiary-color);
+  color: var(--color-white);
 }
 
 .discount-coupon p {
@@ -24,9 +27,48 @@ body {
   background-color: var(--secondary-color);
 }
 
+.department-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.department-grid {
+  position: absolute;
+  top: 100%;
+  left: 10rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 16px;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 8px;
+}
+
+.department-grid a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.btn-link {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-link:hover {
+  color: var(--primary-color);
+}
+
+.banner {
+  background-color: var(--color-white-02);
+}
+
 @media (max-width: 575.98px) {
   .discount-coupon p,
-  .discount-coupon span {
+  .discount-coupon span,
+  .btn-link {
     font-size: 14px;
   }
 }
