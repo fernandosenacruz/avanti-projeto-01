@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #005cff;
+  --secondary-color: #6220c1;
+  --tertiary-color: #ffffff;
+}
+
+body {
+  font-family: Nunito, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.discount-coupon {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+.discount-coupon p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.price {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 575.98px) {
+  .discount-coupon p,
+  .discount-coupon span {
+    font-size: 14px;
+  }
+}
