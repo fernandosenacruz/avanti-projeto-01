@@ -1,45 +1,43 @@
 export function createDepartmentMenu() {
   const deptBtn = document.createElement('button');
-  deptBtn.className = 'btn btn-link';
+  deptBtn.className = 'dept-btn';
   deptBtn.textContent = 'Departamento';
 
   const grid = document.createElement('div');
   grid.className = 'department-grid';
   grid.style.display = 'none';
   grid.innerHTML = `
-    <div class="container">
-      <div class="row">
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-        <div class="col-auto"><a href="#">Categoria</a></div>
-      </div>
+    <div class="grid-container">
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
+      <a href="#">Categoria</a>
     </div>
   `;
 

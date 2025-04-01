@@ -27,38 +27,124 @@ body {
   background-color: var(--secondary-color);
 }
 
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.logo img {
+  width: 148.07px;
+  height: 26.28px;
+}
+
+.cart img {
+  width: 25.04px;
+  height: 24.16px;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  color: var(--color-black);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 10dvh;
+  left: 0;
+  width: 100%;
+  height: 30dvh;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+  background: linear-gradient(
+    to right,
+    var(--color-white-02) 0,
+    var(--color-white-02) 180px,
+    transparent 180px,
+    transparent 100%
+  );
+  opacity: 95%;
+}
+
+.nav-overlay a {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
 .department-menu {
   position: relative;
   display: inline-block;
 }
 
+.dept-btn {
+  background: none;
+  border: none;
+  color: var(--color-black);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.dept-btn:active,
+.dept-btn:hover,
+.department-grid a:active,
+.department-grid a:hover {
+  color: var(--primary-color);
+}
+
 .department-grid {
   position: absolute;
-  top: 100%;
+  top: -20px;
   left: 10rem;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--color-white);
   padding: 16px;
   z-index: 1000;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 8px;
 }
 
 .department-grid a {
   text-decoration: none;
-  color: #000;
-  display: block;
-}
-
-.btn-link {
   color: var(--color-black);
-  text-decoration: none;
-  font-weight: bold;
+  padding: 4px;
+  display: block;
+  text-align: center;
 }
 
-.btn-link:hover {
-  color: var(--primary-color);
+.search-bar-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  right: 16px;
+  top: 25px;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .banner {
@@ -68,7 +154,25 @@ body {
 @media (max-width: 575.98px) {
   .discount-coupon p,
   .discount-coupon span,
-  .btn-link {
+  .grid-container a,
+  .dept-btn {
     font-size: 14px;
+  }
+
+  .header {
+    margin: 20px 13px;
+  }
+
+  .department-menu {
+    display: block;
+  }
+}
+
+/* @media (min-width: 768) {
+} */
+
+@media (min-width: 1280) {
+  .search-bar-container {
+    max-width: 594px;
   }
 }
