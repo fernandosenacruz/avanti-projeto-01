@@ -182,7 +182,7 @@ body {
 
 .carousel-indicators button {
   border-radius: 50%;
-  background-color: var(--color-gray);
+  background-color: var(--color-gray) !important;
   border: none;
   opacity: 1;
   width: 7px !important;
@@ -190,12 +190,7 @@ body {
 }
 
 .carousel-indicators .active {
-  background-color: var(--color-black);
-}
-
-.card {
-  width: 174px;
-  height: 365px;
+  background-color: var(--color-black) !important;
 }
 
 .card-body h3,

@@ -1,7 +1,7 @@
 export function createCard(cardData) {
   const card = document.createElement('div');
   card.innerHTML = `
-    <div class="card" id="${cardData.id}">
+    <div class="card" id="${cardData.id}" style="width: 171px; height: 365px;">
       <div class="card-image p-2">
         <span class="position-absolute tag">${cardData.tag}</span>
         <img src="${cardData.image}" alt="${cardData.alt}" class="img-fuid w-100"/>
