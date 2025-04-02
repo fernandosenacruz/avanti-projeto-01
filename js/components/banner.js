@@ -5,7 +5,7 @@ export function createBanner() {
     <div class="container">
       <div class="d-flex justify-content-around align-items-center m-0 p-0">
         <div class="col-6 m-0 p-0">
-          <img src="/assets/chair.png" alt="Banner" class="img-fluid h-200" />
+          <img src="/assets/chair.png" alt="Banner" class="img-fluid" />
         </div>
         <div class="col-6 m-0 p-0">
           <div class="d-flex flex-column align-items-center">

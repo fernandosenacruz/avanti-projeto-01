@@ -5,6 +5,9 @@
   --color-white: #ffffff;
   --color-white-02: #e7e7ea;
   --color-black: #000000;
+  --color-gray: #838383;
+  --color-blue: #00264e;
+  --color-grenn-light: #5ec0be;
 }
 
 body {
@@ -149,6 +152,56 @@ body {
 
 .banner {
   background-color: var(--color-white-02);
+}
+
+.tag {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  top: 12px;
+  left: 8px;
+}
+
+.off {
+  background-color: var(--color-grenn-light);
+  color: var(--color-white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.carousel-indicators {
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-indicators button {
+  border-radius: 50%;
+  background-color: var(--color-gray);
+  border: none;
+  opacity: 1;
+  width: 7px !important;
+  height: 7px !important;
+}
+
+.carousel-indicators .active {
+  background-color: var(--color-black);
+}
+
+.card {
+  width: 174px;
+  height: 365px;
+}
+
+.card-body h3,
+.full-price,
+.installments p {
+  font-size: 12px;
 }
 
 @media (max-width: 575.98px) {
