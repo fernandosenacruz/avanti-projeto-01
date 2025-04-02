@@ -159,6 +159,10 @@ body {
     font-size: 14px;
   }
 
+  .selected-items {
+    font-size: 8px;
+  }
+
   .header {
     margin: 20px 13px;
   }
