@@ -4,6 +4,7 @@ import { createBanner } from './components/banner.js';
 import { createCarrousel } from './components/carrousel.js';
 import { createCupCard } from './components/cupCard.js';
 import { createCupSection } from './components/cupSection.js';
+import { createBannerAvanti } from './components/bannerAvanti.js';
 import { createFooter } from './components/footer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,5 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   app.appendChild(createCarrousel());
   app.appendChild(createCupCard());
   app.appendChild(createCupSection());
+  app.appendChild(createCupCard());
+  app.appendChild(createBannerAvanti());
   app.appendChild(createFooter());
 });

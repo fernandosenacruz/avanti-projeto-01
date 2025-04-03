@@ -221,6 +221,20 @@ body {
   font-size: 30px;
 }
 
+.banner-avanti {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/assets/banner-avanti.png') no-repeat center center;
+  background-size: cover;
+  height: 660px;
+}
+
+.banner-avanti p {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+
 @media (max-width: 575.98px) {
   .discount-coupon p,
   .discount-coupon span,
@@ -265,6 +279,10 @@ body {
 
   .cup-section-paragraph {
     font-size: 12px;
+  }
+
+  .banner-avanti {
+    height: 449px;
   }
 }
 

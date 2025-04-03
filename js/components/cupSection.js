@@ -1,6 +1,6 @@
 export function createCupSection() {
   const cupSection = document.createElement('section');
-  cupSection.className = 'container-fluid w-100 cup-section';
+  cupSection.className = 'container-fluid w-100 mb-5 cup-section';
 
   const row = document.createElement('div');
   row.className = 'row flex-md-row-reverse';
