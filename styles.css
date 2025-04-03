@@ -6,6 +6,7 @@
   --color-white-02: #e7e7ea;
   --color-black: #000000;
   --color-gray: #838383;
+  --color-gray-light: #dedede;
   --color-blue: #00264e;
   --color-grenn-light: #5ec0be;
 }
@@ -212,6 +213,14 @@ body {
   font-size: 18px;
 }
 
+.cup-section {
+  background-color: var(--color-gray-light);
+}
+
+.cup-section-title {
+  font-size: 30px;
+}
+
 @media (max-width: 575.98px) {
   .discount-coupon p,
   .discount-coupon span,
@@ -244,13 +253,43 @@ body {
   .card-text {
     font-size: 14px;
   }
+
+  .cup-section-img {
+    width: 349px;
+    height: 349px;
+  }
+
+  .cup-section-title {
+    font-size: 20px;
+  }
+
+  .cup-section-paragraph {
+    font-size: 12px;
+  }
 }
 
-/* @media (min-width: 768) {
-} */
+@media screen and (min-width: 576px) and (max-width: 1023.98px) {
+  .cup-section-title {
+    font-size: 22px;
+  }
+
+  .cup-section-img {
+    width: 349px;
+    height: 349px;
+  }
+
+  .cup-section-paragraph {
+    font-size: 14px;
+  }
+}
 
 @media (min-width: 1280) {
   .search-bar-container {
     max-width: 594px;
+  }
+
+  .cup-section-img {
+    width: 652px;
+    height: 728.14px;
   }
 }
