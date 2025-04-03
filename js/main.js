@@ -5,6 +5,7 @@ import { createCarrousel } from './components/carrousel.js';
 import { createCupCard } from './components/cupCard.js';
 import { createCupSection } from './components/cupSection.js';
 import { createBannerAvanti } from './components/bannerAvanti.js';
+import { createNewsletter } from './components/newsletter.js';
 import { createFooter } from './components/footer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,5 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   app.appendChild(createCupSection());
   app.appendChild(createCupCard());
   app.appendChild(createBannerAvanti());
+  app.appendChild(createNewsletter());
   app.appendChild(createFooter());
 });

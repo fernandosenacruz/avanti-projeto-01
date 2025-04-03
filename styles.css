@@ -4,6 +4,7 @@
 
   --color-white: #ffffff;
   --color-white-02: #e7e7ea;
+  --color-white-03: #f5f5f5;
   --color-black: #000000;
   --color-gray: #838383;
   --color-gray-light: #dedede;
@@ -235,6 +236,10 @@ body {
   color: var(--color-white);
 }
 
+.newsletter-form {
+  background-color: var(--color-white-03);
+}
+
 @media (max-width: 575.98px) {
   .discount-coupon p,
   .discount-coupon span,
@@ -299,9 +304,14 @@ body {
   .cup-section-paragraph {
     font-size: 14px;
   }
+
+  .nl-btn {
+    width: 326px !important;
+    height: 48px !important;
+  }
 }
 
-@media (min-width: 1280) {
+@media (min-width: 1024px) {
   .search-bar-container {
     max-width: 594px;
   }
@@ -309,5 +319,18 @@ body {
   .cup-section-img {
     width: 652px;
     height: 728.14px;
+  }
+
+  .newsletter-input {
+    max-width: 280px;
+  }
+
+  .newsletter-agree {
+    max-width: 278px;
+  }
+
+  .nl-btn {
+    width: 326px !important;
+    height: 48px !important;
   }
 }
