@@ -8,7 +8,7 @@ export function createHeader() {
 
   const logoAvanti = document.createElement('div');
   logoAvanti.className = 'logo';
-  logoAvanti.innerHTML = `<img src="/assets/avanti.png" alt="Logo avvanti">`;
+  logoAvanti.innerHTML = `<img src="/assets/avanti.png" alt="Logo avanti">`;
 
   const cart = document.createElement('div');
   cart.className = 'cart';

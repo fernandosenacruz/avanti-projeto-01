@@ -6,6 +6,7 @@ import { createCupCard } from './components/cupCard.js';
 import { createCupSection } from './components/cupSection.js';
 import { createBannerAvanti } from './components/bannerAvanti.js';
 import { createNewsletter } from './components/newsletter.js';
+import { createInstitutional } from './components/institutional.js';
 import { createFooter } from './components/footer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,5 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   app.appendChild(createCupCard());
   app.appendChild(createBannerAvanti());
   app.appendChild(createNewsletter());
+  app.appendChild(createInstitutional());
   app.appendChild(createFooter());
 });
