@@ -2,14 +2,14 @@ export function createDiscountCoupon() {
   const coupon = document.createElement('div');
   coupon.className = 'discount-coupon container-auto';
   coupon.innerHTML = `
-    <div class="row justify-content-center g-1">
-      <p class="col-auto">Ganhe </p>
-      <span class="price col-auto">R$10,00</span>
-      <p class="col-auto">de desconto no seu primeiro pedido.</p>
-    </div>
-    <div class="row justify-content-center g-1">
-      <p class="col-auto">Utilze o cupom</p>
-      <span class="col-auto">DESCOCNTO10</span>
+    <div class="d-flex flex-wrap justify-content-center align-itmes-center" style="min-height: 30px">
+      <p class="fw-bold mb-0">
+        Ganhe 
+        <span class="price">R$10,00</span>
+        de desconto no seu primeiro pedido.
+      </p>
+
+      <p class="fw-bold mb-0 mx-2">Utilze o cupom <span style="font-weight: normal;">DESCOCNTO10</span></p>
     </div>
   `;
   return coupon;

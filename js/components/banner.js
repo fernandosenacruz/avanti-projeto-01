@@ -1,19 +1,22 @@
 export function createBanner() {
   const banner = document.createElement('section');
-  banner.className = 'banner';
+  banner.className = 'banner position-relative overflow-hidden';
+
   banner.innerHTML = `
-    <div class="container">
-      <div class="d-flex justify-content-around align-items-center m-0 p-0">
-        <div class="col-6 m-0 p-0">
-          <img src="/assets/chair.png" alt="Banner" class="img-fluid" />
+    <div class="container h-100">
+      <div class="d-flex align-items-center h-100 banner-flex">
+        <div class="banner-img-wrapper">
+          <img src="/assets/chair.png"
+               alt="Banner"
+               class="img-fluid banner-img object-fit-cover" />
         </div>
-        <div class="col-6 m-0 p-0">
-          <div class="d-flex flex-column align-items-center">
-            <h2 class="fw-bold fs-4 mb-0">SUPER</h2>
-            <h2 class="fs-5 mt-0">SALE</h2>
-            <p class="fw-bold mb-0 text-primary selected-items mb-1">SELECTED ITEMS UP TO</p>
-            <p class="fw-bold fs-5 text-primary mb-0">50% OFF</p>
-          </div>
+
+        <div class="banner-text-wrapper ps-3">
+          <h2 class="d-flex flex-wrap lh-1 mb-2 banner-title"> <span class="fw-bold">SUPER</span> SALE</h2>
+          <p class="text-uppercase mb-1 text-primary banner-subtitle">
+            Selected items up to
+          </p>
+          <p class="fw-bold text-primary banner banner-off">50% OFF</p>
         </div>
       </div>
     </div>

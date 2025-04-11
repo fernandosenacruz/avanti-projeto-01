@@ -30,6 +30,7 @@ body {
 
 .price {
   background-color: var(--secondary-color);
+  height: fit-content;
 }
 
 .header {
@@ -154,6 +155,32 @@ body {
 
 .banner {
   background-color: var(--color-white-02);
+  height: auto;
+}
+
+.banner-title {
+  font-size: 100px;
+  justify-content: center;
+}
+
+.banner-subtitle {
+  font-size: 25px;
+}
+
+.banner-off {
+  font-size: 60px;
+}
+
+.banner-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-img-wrapper {
+  margin-left: -200px;
 }
 
 .tag {
@@ -257,6 +284,18 @@ body {
     margin: 20px 13px;
   }
 
+  .banner-title {
+    font-size: 40px;
+  }
+
+  .banner-subtitle {
+    font-size: 12px;
+  }
+
+  .banner-off {
+    font-size: 32px;
+  }
+
   .department-menu {
     display: block;
   }
@@ -308,6 +347,18 @@ body {
 
   .cup-section-paragraph {
     font-size: 14px;
+  }
+
+  .banner-title {
+    font-size: 60px;
+  }
+
+  .banner-subtitle {
+    font-size: 18px;
+  }
+
+  .banner-off {
+    font-size: 46px;
   }
 
   .nl-btn {
