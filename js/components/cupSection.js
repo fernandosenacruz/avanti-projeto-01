@@ -11,11 +11,11 @@ export function createCupSection() {
   const img = document.createElement('img');
   img.src = '/assets/cup-avani-kitchen.png';
   img.alt = 'Cup Avanti in kitchen';
-  img.className = 'cup-section-img mt-5';
+  img.className = 'cup-section-img mt-4';
   colImg.appendChild(img);
 
   const colText = document.createElement('div');
-  colText.className = 'col-12 col-md-6 my-5';
+  colText.className = 'col-12 col-md-6 mt-4 mb-1';
   const title = document.createElement('h2');
   title.className = 'text-center fw-bold cup-section-title';
   title.textContent = 'Lorem Ipsum';

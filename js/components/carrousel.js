@@ -17,7 +17,7 @@ export function createCarrousel() {
 
     return `
       <div class="container d-flex justify-content-between mt-5 mb-2">
-        <h5 class="text-center">Lançamentos</h5>
+        <h5 class="text-center fw-bold">Lançamentos</h5>
         <a href="#" class="fs-6" style="color: #000;">Ver mais</a>
       </div>
       <div id="carouselSlidesOnly" class="carousel slide mb-5" data-bs-ride="carousel">
