@@ -132,3 +132,37 @@ export const cardMockedData = [
     installments: '10x R$ 7,99',
   },
 ];
+
+export const institutionalMockedData = {
+  header: 'Institucional',
+  body: [
+    'Sobre Nós',
+    'Nossas Lojas',
+    'Privacidade e Segurança',
+    'Termos e Condições',
+  ],
+};
+
+export const helpMockedData = {
+  header: 'Central de ajuda',
+  body: [
+    'Fale Conosco',
+    'Frete e Entrega',
+    'Trocas e Devoluções',
+    'Forma de Pagamento',
+    'FAQ',
+  ],
+};
+
+export const serviceMockedData = {
+  header: 'Atendimento',
+  body: [
+    'Telefone: (00) 1234-5678',
+    'E-mail: exemplo@exemplo.com.br',
+    'Horário de atendimento:',
+  ],
+  officeHours: [
+    { days: 'Segunda a Sábado', time: '07h00 às 23h00' },
+    { days: 'Domingos e Feriados', time: '07h00 às 21h00' },
+  ],
+};

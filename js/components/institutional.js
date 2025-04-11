@@ -1,9 +1,12 @@
 import { createSocialMedias } from './socialMedias.js';
 import { createPaymentMethods } from './paymentMethods.js';
+import { resizingIsLessThan } from '../utils/resizing.js';
+import { createAccordion } from './accordion.js';
 import {
-  resizingIsGreaterThan,
-  resizingIsLessThan,
-} from '../utils/resizing.js';
+  helpMockedData,
+  institutionalMockedData,
+  serviceMockedData,
+} from '../data.js';
 import { generateLinks } from './generateLinks.js';
 
 export function createInstitutional() {
@@ -27,80 +30,66 @@ export function createInstitutional() {
   );
   wrapper.appendChild(createSocialMedias());
 
-  const links = document.createElement('div');
-  links.id = 'links';
-  links.classList.add('d-flex', 'justify-content-center', 'gap-5', 'mt-3');
+  function renderLinksContainer() {
+    const container = document.createElement('div');
+    container.id = 'links';
 
-  const institucionalLinks = document.createElement('div');
-  institucionalLinks.id = 'institutionalLinks';
-  institucionalLinks.appendChild(
-    generateLinks('Institucional', [
-      'Sobre nós',
-      'Nossas lojas',
-      'Privacidade e segurança',
-      'Termos e Condições',
-    ])
-  );
+    if (resizingIsLessThan(768)) {
+      container.appendChild(
+        createAccordion(
+          institutionalMockedData.header,
+          institutionalMockedData.body
+        )
+      );
+      container.appendChild(
+        createAccordion(helpMockedData.header, helpMockedData.body)
+      );
+      container.appendChild(
+        createAccordion(
+          serviceMockedData.header,
+          serviceMockedData.body,
+          serviceMockedData.officeHours
+        )
+      );
+    } else {
+      container.classList.add(
+        'd-flex',
+        'justify-content-center',
+        'gap-5',
+        'mt-3'
+      );
 
-  const helpLinks = document.createElement('div');
-  helpLinks.id = 'helpLinks';
-  helpLinks.appendChild(
-    generateLinks('Central de ajuda', [
-      'Fale conosco',
-      'Frete e entrega',
-      'Trocas e devoluções',
-      'Forma de pagamento',
-      'FAQ',
-    ])
-  );
+      container.appendChild(
+        generateLinks(
+          institutionalMockedData.header,
+          institutionalMockedData.body
+        )
+      );
+      container.appendChild(
+        generateLinks(helpMockedData.header, helpMockedData.body)
+      );
+      container.appendChild(
+        generateLinks(
+          serviceMockedData.header,
+          serviceMockedData.body,
+          serviceMockedData.officeHours
+        )
+      );
+    }
 
-  const serviceLinks = document.createElement('div');
-  serviceLinks.id = 'serviceLinks';
-  serviceLinks.appendChild(
-    generateLinks(
-      'Atendimento',
-      [
-        'Telefone: (00) 1234-5678',
-        'E-mail: exemplo@exemplo.com.br',
-        'Horas de atendimento:',
-      ],
-      [
-        { days: 'Segunda a Sexta', time: '08:00 às 18:00' },
-        { days: 'Sábado', time: '08:00 às 12:00' },
-      ]
-    )
-  );
+    return container;
+  }
 
-  links.appendChild(institucionalLinks);
-  links.appendChild(helpLinks);
-  links.appendChild(serviceLinks);
-
-  wrapper.appendChild(links);
-  institucional.appendChild(wrapper);
-  institucional.appendChild(createPaymentMethods());
+  wrapper.appendChild(renderLinksContainer());
 
   window.addEventListener('resize', () => {
-    if (resizingIsGreaterThan(390) && resizingIsLessThan(768)) {
-      const oldLinks = document.getElementById('#links');
-      if (oldLinks) {
-        const newLinks = document.createElement('div');
-        newLinks.id = 'links';
-        newLinks.innerHTML = `<h4>Trocou</h4>`;
-        wrapper.replaceChild(newLinks, oldLinks);
-      }
-    }
-    if (resizingIsGreaterThan(768)) {
-      const oldLinks = document.getElementById('#links');
-      if (oldLinks) {
-        const newLinks = document.createElement('div');
-        newLinks.id = 'links';
-        newLinks.appendChild(institucionalLinks);
-        newLinks.appendChild(helpLinks);
-        newLinks.appendChild(serviceLinks);
-        wrapper.replaceChild(newLinks, oldLinks);
-      }
-    }
+    const old = wrapper.querySelector('#links');
+    if (!old) return;
+    const fresh = renderLinksContainer();
+    wrapper.replaceChild(fresh, old);
   });
 
+  institucional.appendChild(wrapper);
+  institucional.appendChild(createPaymentMethods());
   return institucional;
 }
