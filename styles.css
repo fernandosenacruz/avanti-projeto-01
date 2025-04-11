@@ -293,6 +293,10 @@ body {
   .banner-avanti {
     height: 449px;
   }
+
+  .institutional-wrapper {
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 1023.98px) {
@@ -312,6 +316,10 @@ body {
   .nl-btn {
     width: 326px !important;
     height: 48px !important;
+  }
+
+  .institutional-wrapper {
+    flex-direction: column;
   }
 }
 

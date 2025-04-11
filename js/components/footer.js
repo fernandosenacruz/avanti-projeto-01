@@ -1,6 +1,6 @@
 export function createFooter() {
   const footer = document.createElement('footer');
-  footer.className = 'footer container';
+  footer.className = 'footer container mb-5';
   footer.innerHTML = `
     <p class="text-center mx-3 mt-5">
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,

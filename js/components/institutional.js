@@ -17,12 +17,19 @@ export function createInstitutional() {
   );
 
   const wrapper = document.createElement('div');
-  wrapper.classList.add('d-flex', 'justify-content-center', 'w-100', 'mt-5');
+  wrapper.classList.add(
+    'd-flex',
+    'justify-content-center',
+    'w-100',
+    'my-5',
+    'gap-5',
+    'institutional-wrapper'
+  );
   wrapper.appendChild(createSocialMedias());
 
   const links = document.createElement('div');
   links.id = 'links';
-  links.classList.add('d-flex', 'justify-content-center');
+  links.classList.add('d-flex', 'justify-content-center', 'gap-5', 'mt-3');
 
   const institucionalLinks = document.createElement('div');
   institucionalLinks.id = 'institutionalLinks';
