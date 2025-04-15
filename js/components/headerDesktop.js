@@ -1,5 +1,5 @@
 import { createSearchBar } from './searchBar.js';
-import { createDepartmentMenu } from './departmentMenu.js';
+import { createDepartmentMenu } from './createDepartmentMenu.js';
 
 export function createHeaderDesktop() {
   const header = document.createElement('div');

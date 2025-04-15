@@ -23,7 +23,7 @@ export function createHeaderMobile() {
   navItems.style.display = 'none';
 
   for (let i = 0; i < 10; i++) {
-    navItems.appendChild(createDepartmentMenu());
+    navItems.appendChild(createDepartmentMenu(null, true));
   }
 
   toggleButton.addEventListener('click', (e) => {

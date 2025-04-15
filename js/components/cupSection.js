@@ -9,7 +9,7 @@ export function createCupSection() {
   colImg.className =
     'col-12 col-md-6 d-flex align-items-center justify-content-center';
   const img = document.createElement('img');
-  img.src = '/assets/cup-avani-kitchen.png';
+  img.src = '/assets/cup-avanti-kitchen.png';
   img.alt = 'Cup Avanti in kitchen';
   img.className = 'cup-section-img mt-4';
   colImg.appendChild(img);

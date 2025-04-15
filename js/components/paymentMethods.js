@@ -19,7 +19,7 @@ export function createPaymentMethods() {
     <img src="/assets/elo.png" alt="Elo icon">
     <img src="/assets/diners.png" alt="Diners icon">
     <img src="/assets/paypal.png" alt="Paypal icon">
-    <img src="/assets/maestro.png" alt="Maestro icon">
+    <img src="/assets/pix.png" alt="Pix icon">
     <img src="/assets/barscode.png" alt="Barscode icon">
   `;
 

@@ -294,6 +294,46 @@ body {
   background-color: var(--color-white-03);
 }
 
+.product-launch {
+  position: relative;
+  width: 236px;
+  height: 298px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-image: url('/assets/cup-avanti-kitchen.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-launch-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.product-launch .card-body {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.btn-product-launch {
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+  border-radius: 10px;
+  width: 116px;
+  height: 38px;
+  font-size: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-product-launch:hover {
+  background: var(--color-white);
+  color: #000;
+}
+
 @media (max-width: 575.98px) {
   .discount-coupon p,
   .discount-coupon span,
@@ -446,11 +486,14 @@ body {
   }
 
   .department-grid {
+    display: flex;
+    justify-content: space-around;
     left: 14.5rem;
   }
 
   .grid-container {
     display: flex;
     flex-wrap: wrap;
+    width: 50%;
   }
 }
