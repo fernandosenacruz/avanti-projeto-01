@@ -33,7 +33,7 @@ body {
   height: fit-content;
 }
 
-.header {
+.header-mobile {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -57,37 +57,55 @@ body {
   color: var(--color-black);
   font-size: 1.2rem;
   cursor: pointer;
+  padding: 0;
 }
 
-.nav-overlay {
+.nav-overlay-mobile,
+.nav-overlay-desktop {
   position: fixed;
-  top: 10dvh;
-  left: 0;
   width: 100%;
-  height: 30dvh;
   z-index: 9999;
   padding: 20px;
   overflow-y: auto;
-  background: linear-gradient(
-    to right,
-    var(--color-white-02) 0,
-    var(--color-white-02) 180px,
-    transparent 180px,
-    transparent 100%
-  );
   opacity: 95%;
 }
 
-.nav-overlay a {
+.nav-overlay-mobile {
+  top: 10dvh;
+  left: 0;
+  height: 30dvh;
+  z-index: 9999;
+  background: linear-gradient(
+    to right,
+    var(--color-white-03) 0,
+    var(--color-white-03) 180px,
+    transparent 180px,
+    transparent 100%
+  );
+}
+
+.nav-overlay-mobile a {
   color: var(--primary-color);
   font-size: 1.2rem;
   display: block;
   margin-bottom: 16px;
 }
 
+.nav-overlay-desktop {
+  top: 8.2rem;
+  left: 3rem;
+  background: linear-gradient(
+    to right,
+    var(--color-white-03) 0,
+    var(--color-white-03) 250px,
+    var(--color-white) 250px,
+    var(--color-white) 100%
+  );
+}
+
 .department-menu {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 .dept-btn {
@@ -131,6 +149,7 @@ body {
   display: inline-block;
   width: 100%;
   max-width: none;
+  height: 40px;
 }
 
 .search-input {
@@ -287,12 +306,16 @@ body {
     font-size: 8px;
   }
 
-  .header {
+  .header-mobile {
     margin: 20px 13px;
   }
 
   .banner-title {
     font-size: 40px;
+  }
+
+  .nav-overlay-mobile {
+    top: 11.3dvh;
   }
 
   .banner-subtitle,
@@ -303,10 +326,6 @@ body {
 
   .banner-off {
     font-size: 32px;
-  }
-
-  .department-menu {
-    display: block;
   }
 
   .cup-card-img {
@@ -337,6 +356,12 @@ body {
 
   .institutional-wrapper {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 653px) {
+  .nav-overlay-mobile {
+    top: 12dvh;
   }
 }
 
@@ -376,7 +401,22 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .nav-overlay-mobile {
+    top: 10dvh;
+  }
+}
+
 @media (min-width: 1024px) {
+  .nav-overlay-mobile {
+    top: 7rem;
+  }
+
+  .logo img {
+    width: 152.48px;
+    height: 27.08px;
+  }
+
   .search-bar-container {
     max-width: 594px;
   }
@@ -397,5 +437,20 @@ body {
   .nl-btn {
     width: 326px !important;
     height: 48px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .nav-overlay-desktop {
+    box-shadow: rgb(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
+  .department-grid {
+    left: 14.5rem;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

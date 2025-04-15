@@ -1,4 +1,4 @@
-export function createDepartmentMenu() {
+export function createDepartmentMenu(styles = null) {
   const deptBtn = document.createElement('button');
   deptBtn.className = 'dept-btn';
   deptBtn.textContent = 'Departamento';
@@ -6,40 +6,21 @@ export function createDepartmentMenu() {
   const grid = document.createElement('div');
   grid.className = 'department-grid';
   grid.style.display = 'none';
-  grid.innerHTML = `
-    <div class="grid-container">
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-      <a href="#">Categoria</a>
-    </div>
-  `;
+
+  const gridContainer = document.createElement('div');
+  gridContainer.className = 'grid-container';
+
+  for (let i = 1; i <= 30; i++) {
+    const item = document.createElement('a');
+    item.href = '#';
+    item.id = `item-${i}`;
+    if (styles?.gridContainer) {
+      item.style = styles.gridContainer;
+    }
+    item.textContent = 'Categoria';
+    gridContainer.appendChild(item);
+  }
+  grid.appendChild(gridContainer);
 
   function toggleGrid(e) {
     e.stopPropagation();
