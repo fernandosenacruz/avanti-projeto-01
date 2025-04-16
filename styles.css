@@ -144,6 +144,51 @@ body {
   text-align: center;
 }
 
+.department-nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.department-grid-desktop {
+  position: absolute;
+  width: 98%;
+  display: none;
+  flex-direction: column;
+  background-color: var(--color-white);
+  opacity: 0.95;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container-desktop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start;
+  column-gap: 8rem;
+  height: 75%;
+  margin-top: 5px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: var(--color-black);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.department-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
 .search-bar-container {
   position: relative;
   display: inline-block;

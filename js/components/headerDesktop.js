@@ -1,10 +1,15 @@
 import { createSearchBar } from './searchBar.js';
 import { createDepartmentMenu } from './createDepartmentMenu.js';
+import { createDepartmentNav } from './departamentNav.js';
+import { createCategoriesGrid } from './categoriesGrid.js';
 
 export function createHeaderDesktop() {
   const header = document.createElement('div');
   header.className = 'header-desktop';
   header.id = 'header-desktop';
+
+  const d1 = document.createElement('div');
+  d1.className = 'd-flex justify-content-between align-items-center mx-5 my-3';
 
   const logoAvanti = document.createElement('div');
   logoAvanti.className = 'logo';
@@ -37,28 +42,24 @@ export function createHeaderDesktop() {
   d2.appendChild(wellcome);
   d2.appendChild(cart);
 
-  const d1 = document.createElement('div');
-  d1.className = 'd-flex justify-content-between align-items-center mx-5 my-3';
-
   d1.appendChild(logoAvanti);
   d1.appendChild(searchBar);
   d1.appendChild(d2);
 
-  const department = document.createElement('div');
-  department.className = 'd-flex align-items-center mx-5';
+  const departmentWrapper = document.createElement('div');
+  departmentWrapper.className = 'd-flex align-items-center mx-5 mb-1';
 
   const toggleButton = document.createElement('button');
   toggleButton.className = 'nav-toggle';
-  toggleButton.innerHTML = '&#9776 Todas as Categorias';
+  toggleButton.style.width = '12.4rem';
+  toggleButton.innerHTML = '&#9776; Todas as Categorias';
 
   const navItems = document.createElement('div');
   navItems.className = 'nav-items';
   navItems.style.display = 'none';
 
   for (let i = 0; i < 10; i++) {
-    const styles = {
-      gridContainer: 'width: 10rem;',
-    };
+    const styles = { gridContainer: 'width: 10rem;' };
     navItems.appendChild(createDepartmentMenu(styles));
   }
 
@@ -85,10 +86,31 @@ export function createHeaderDesktop() {
   nav.appendChild(toggleButton);
   nav.appendChild(navItems);
 
-  department.appendChild(nav);
+  const departmentNav = createDepartmentNav();
+  departmentWrapper.appendChild(nav);
+  departmentWrapper.appendChild(departmentNav);
 
   header.appendChild(d1);
-  header.appendChild(department);
+  header.appendChild(departmentWrapper);
+
+  const categoriesGrid = createCategoriesGrid('Departamento', 'Categoria');
+  categoriesGrid.style.display = 'none';
+  header.appendChild(categoriesGrid);
+
+  const navButtons = departmentNav.querySelectorAll('.nav-button');
+  navButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      categoriesGrid.style.display = 'block';
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!departmentWrapper.contains(e.target)) {
+      categoriesGrid.style.display = 'none';
+    }
+  });
 
   return header;
 }
