@@ -1,7 +1,8 @@
 export function createCupCard() {
   const card = document.createElement('div');
+  card.className = 'cup-card';
   card.innerHTML = `
-  <div class="card border-0 justify-content-center align-items-center">
+  <div class="card cup-card-box">
     <div class="card-image m-0 p-0 cup-card-img">
       <img src="/assets/cup-avanti.png" alt="Cup avanti" class="card-img-top"/>
     </div>

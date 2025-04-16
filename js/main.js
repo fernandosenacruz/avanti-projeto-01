@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   app.appendChild(createCupCard());
   app.appendChild(createCupSection());
   app.appendChild(createCupCard());
+  app.appendChild(createCarrousel(true));
   app.appendChild(createBannerAvanti());
   app.appendChild(createNewsletter());
   app.appendChild(createInstitutional());

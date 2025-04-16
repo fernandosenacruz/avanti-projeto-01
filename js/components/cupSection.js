@@ -3,7 +3,7 @@ export function createCupSection() {
   cupSection.className = 'container-fluid w-100 mb-5 cup-section';
 
   const row = document.createElement('div');
-  row.className = 'row flex-md-row-reverse';
+  row.className = 'row flex-md-row-reverse align-items-center';
 
   const colImg = document.createElement('div');
   colImg.className =

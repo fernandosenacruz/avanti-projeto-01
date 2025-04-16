@@ -379,6 +379,12 @@ body {
   color: #000;
 }
 
+.cup-card-box {
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
 @media (max-width: 575.98px) {
   .discount-coupon p,
   .discount-coupon span,
@@ -444,6 +450,12 @@ body {
   }
 }
 
+@media (max-width: 576px) {
+  .search-bar-container {
+    margin-top: 2rem;
+  }
+}
+
 @media screen and (min-width: 576px) and (max-width: 653px) {
   .nav-overlay-mobile {
     top: 12dvh;
@@ -484,6 +496,10 @@ body {
   .institutional-wrapper {
     flex-direction: column;
   }
+
+  .search-bar-container {
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
@@ -507,8 +523,8 @@ body {
   }
 
   .cup-section-img {
-    width: 652px;
-    height: 728.14px;
+    width: 349px;
+    height: 349px;
   }
 
   .newsletter-input {
@@ -540,5 +556,29 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
+  }
+
+  .cup-card {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+  }
+
+  .cup-card-box {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .cup-card-box .card-body {
+    width: 50%;
+  }
+
+  .cup-card-img {
+    height: auto;
+  }
+
+  .cup-section-img {
+    width: 652px;
+    height: 728.14px;
   }
 }

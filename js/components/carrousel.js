@@ -10,7 +10,7 @@ function groupCards(data, groupSize) {
   return groups;
 }
 
-export function createCarrousel() {
+export function createCarrousel(isDesktop = false) {
   function buildCarouselHTML() {
     const cardsPerSlide = getContentCardsPerSlide();
     const cardGroups = groupCards(cardMockedData, cardsPerSlide);
@@ -58,14 +58,19 @@ export function createCarrousel() {
   }
 
   const carrouselContainer = document.createElement('section');
-  carrouselContainer.className =
-    'container d-flex flex-column justify-content-center align-items-center';
+  carrouselContainer.className = `container d-flex flex-column justify-content-center align-items-center`;
 
   carrouselContainer.innerHTML = buildCarouselHTML();
 
   window.addEventListener('resize', () => {
+    if (isDesktop) {
+      let display = window.innerWidth < 1280 ? 'none' : 'flex';
+      carrouselContainer.className = `container d-${display} flex-column justify-content-center align-items-center`;
+    }
     carrouselContainer.innerHTML = buildCarouselHTML();
   });
+
+  window.dispatchEvent(new Event('resize'));
 
   return carrouselContainer;
 }
